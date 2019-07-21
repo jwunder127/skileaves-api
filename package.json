@@ -4,9 +4,9 @@
     "description": "api layer for skileaves app",
     "main": "./app/app.ts",
     "scripts": {
-        "build": "tsc && node ./dist/server.js",
-        "dev": "nodemon --exec npm start --watch src --ext ts",
-        "start": "ts-node ./src/server.ts",
+        "dev": "nodemon --exec ts-node ./src/server.ts --watch src --ext ts",
+        "postinstall": "tsc",
+        "start": "node ./dist/server.js",
         "test": "test",
         "tsc": "tsc"
     },
@@ -21,11 +21,11 @@
     },
     "homepage": "https://github.com/jwunder127/skileaves-api#readme",
     "devDependencies": {
-        "@types/express": "^4.17.0",
-        "@types/node": "^12.6.8",
         "nodemon": "^1.19.1"
     },
     "dependencies": {
+        "@types/express": "^4.17.0",
+        "@types/node": "^12.6.8",
         "dotenv": "^8.0.0",
         "express": "^4.17.1",
         "express-winston": "^3.2.1",
