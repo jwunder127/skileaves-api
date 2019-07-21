@@ -1,37 +1,37 @@
 {
-  "name": "skileaves-api",
-  "version": "1.0.0",
-  "description": "api layer for skileaves app",
-  "main": "./app/app.ts",
-  "scripts": {
-    "dev": "nodemon --exec npm start --watch src --ext ts",
-    "prod": "tsc && node ./build/server.js",
-    "start": "ts-node ./src/server.ts",
-    "test": "test",
-    "tsc": "tsc"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jwunder127/skileaves-api.git"
-  },
-  "author": "John Underwood",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jwunder127/skileaves-api/issues"
-  },
-  "homepage": "https://github.com/jwunder127/skileaves-api#readme",
-  "devDependencies": {
-    "@types/express": "^4.17.0",
-    "@types/node": "^12.6.8",
-    "nodemon": "^1.19.1",
-    "typescript": "^3.5.3",
-    "ts-node": "^8.3.0"
-  },
-  "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "express-winston": "^3.2.1",
-    "pg-promise": "^8.7.5",
-    "winston": "^3.2.1"
-  }
+    "name": "skileaves-api",
+    "version": "1.0.0",
+    "description": "api layer for skileaves app",
+    "main": "./app/app.ts",
+    "scripts": {
+        "build": "tsc && node ./build/server.js",
+        "dev": "nodemon --exec npm start --watch src --ext ts",
+        "start": "ts-node ./src/server.ts",
+        "test": "test",
+        "tsc": "tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jwunder127/skileaves-api.git"
+    },
+    "author": "John Underwood",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jwunder127/skileaves-api/issues"
+    },
+    "homepage": "https://github.com/jwunder127/skileaves-api#readme",
+    "devDependencies": {
+        "@types/express": "^4.17.0",
+        "@types/node": "^12.6.8",
+        "nodemon": "^1.19.1",
+        "typescript": "^3.5.3",
+        "ts-node": "^8.3.0"
+    },
+    "dependencies": {
+        "dotenv": "^8.0.0",
+        "express": "^4.17.1",
+        "express-winston": "^3.2.1",
+        "pg-promise": "^8.7.5",
+        "winston": "^3.2.1"
+    }
 }
