@@ -4,7 +4,7 @@
     "description": "api layer for skileaves app",
     "main": "./app/app.ts",
     "scripts": {
-        "build": "tsc && node ./build/server.js",
+        "build": "tsc && node ./dist/server.js",
         "dev": "nodemon --exec npm start --watch src --ext ts",
         "start": "ts-node ./src/server.ts",
         "test": "test",
