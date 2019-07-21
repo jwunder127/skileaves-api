@@ -1,7 +1,7 @@
 import { MountainsRepository } from './mountains';
 
 interface IExtensions {
-  mountains: MountainsRepository;
+    mountains: MountainsRepository;
 }
 
 export { IExtensions, MountainsRepository };
