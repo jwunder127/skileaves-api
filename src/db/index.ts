@@ -3,13 +3,7 @@ import * as pgPromise from 'pg-promise';
 
 import { IExtensions, MountainsRepository } from './repos';
 
-const dbConfig = {
-    host: process.env.DB_HOST,
-    port: Number(process.env.DB_PORT),
-    database: process.env.DB_NAME,
-    user: '',
-    password: '',
-};
+const dbConnectionString = process.env.DATABASE_URL;
 
 const initOptions: IOptions<IExtensions> = {
     extend(obj: IExtensions) {
@@ -19,6 +13,6 @@ const initOptions: IOptions<IExtensions> = {
 
 const pgp: IMain = pgPromise(initOptions);
 
-const db = <IDatabase<IExtensions> & IExtensions>pgp(dbConfig);
+const db = <IDatabase<IExtensions> & IExtensions>pgp(dbConnectionString);
 
 export = db;
