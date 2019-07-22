@@ -15,4 +15,4 @@ const pgp: IMain = pgPromise(initOptions);
 
 const db = <IDatabase<IExtensions> & IExtensions>pgp(dbConnectionString);
 
-export = db;
+export default db;

@@ -9,15 +9,15 @@ export class MountainsRepository {
         this.db = db;
     }
 
-    public getAll(): Promise<Mountain[]> {
-        return this.db.any('SELECT * FROM mountains');
+    public async getAll(): Promise<Mountain[]> {
+        return await this.db.any('SELECT * FROM mountains');
     }
 
-    public getAllOperating(): Promise<Mountain[]> {
-        return this.db.any('SELECT * FROM mountains WHERE operating_status = $1', 'Operating');
+    public async getAllOperating(): Promise<Mountain[]> {
+        return await this.db.any('SELECT * FROM mountains WHERE operating_status = $1', 'Operating');
     }
 
-    public getOneByID(id: number) {
-        return this.db.oneOrNone('SELECT * FROM mountains WHERE id = $1', id);
+    public async getOneByID(id: number) {
+        return await this.db.oneOrNone('SELECT * FROM mountains WHERE id = $1', id);
     }
 }
