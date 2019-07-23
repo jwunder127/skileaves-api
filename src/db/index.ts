@@ -6,9 +6,9 @@ import { IExtensions, MountainsRepository } from './repos';
 const dbConnectionString = process.env.DATABASE_URL;
 
 const initOptions: IOptions<IExtensions> = {
-    extend(obj: IExtensions) {
-        obj.mountains = new MountainsRepository(obj);
-    },
+  extend(obj: IExtensions) {
+    obj.mountains = new MountainsRepository(obj);
+  }
 };
 
 const pgp: IMain = pgPromise(initOptions);
